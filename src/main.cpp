@@ -19,10 +19,10 @@ void loop() {
 
  const float TEMP_MAX = 50.0f; // In Celsius.
  const float VOLTAGE = 3.3f; // Voltage.
- const float NOISE = 12.0f; // Noise.
 
  float temperature = iVal * VOLTAGE / 1024 * (TEMP_MAX / VOLTAGE);
 
+ // Temperature output-handling logic.
  if(temperature < 10.0f) {
 
     Serial.println("Digitized Value = " + String(iVal) + " is equivalent to an temperature input of " + temperature + "deg. C, which is Cold!");
